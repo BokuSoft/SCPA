@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFF70549-A196-42A1-A8FE-29C16213389A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCPA</RootNamespace>
+    <AssemblyName>SCPA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\SCPA.css" />
+    <Content Include="FrmCarrito.aspx" />
+    <Content Include="FrmCatalogoCategorias.aspx" />
+    <Content Include="FrmCatalogoClientes.aspx" />
+    <Content Include="FrmCatalogoProductos.aspx" />
+    <Content Include="FrmCatalogoProveedores.aspx" />
+    <Content Include="FrmCatalogoSucursales.aspx" />
+    <Content Include="FrmCatalogoUsuarios.aspx" />
+    <Content Include="FrmCategoria.aspx" />
+    <Content Include="FrmCliente.aspx" />
+    <Content Include="FrmContacto.aspx" />
+    <Content Include="FrmLogin.aspx" />
+    <Content Include="FrmPrincipal.aspx" />
+    <Content Include="FrmProducto.aspx" />
+    <Content Include="FrmProveedor.aspx" />
+    <Content Include="FrmSucursal.aspx" />
+    <Content Include="FrmUsuario.aspx" />
+    <Content Include="FrmVerProductos.aspx" />
+    <Content Include="img\banner.png" />
+    <Content Include="img\Emily-4.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-2.1.1.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmCarrito.aspx.cs">
+      <DependentUpon>FrmCarrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCarrito.aspx.designer.cs">
+      <DependentUpon>FrmCarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoCategorias.aspx.cs">
+      <DependentUpon>FrmCatalogoCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoCategorias.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoClientes.aspx.cs">
+      <DependentUpon>FrmCatalogoClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoClientes.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoProductos.aspx.cs">
+      <DependentUpon>FrmCatalogoProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoProductos.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoProveedores.aspx.cs">
+      <DependentUpon>FrmCatalogoProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoProveedores.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoSucursales.aspx.cs">
+      <DependentUpon>FrmCatalogoSucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoSucursales.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoSucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoUsuarios.aspx.cs">
+      <DependentUpon>FrmCatalogoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoUsuarios.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoria.aspx.cs">
+      <DependentUpon>FrmCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCategoria.aspx.designer.cs">
+      <DependentUpon>FrmCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCliente.aspx.cs">
+      <DependentUpon>FrmCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCliente.aspx.designer.cs">
+      <DependentUpon>FrmCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContacto.aspx.cs">
+      <DependentUpon>FrmContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmContacto.aspx.designer.cs">
+      <DependentUpon>FrmContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.aspx.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.aspx.designer.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.aspx.cs">
+      <DependentUpon>FrmPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.aspx.designer.cs">
+      <DependentUpon>FrmPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducto.aspx.cs">
+      <DependentUpon>FrmProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmProducto.aspx.designer.cs">
+      <DependentUpon>FrmProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedor.aspx.cs">
+      <DependentUpon>FrmProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmProveedor.aspx.designer.cs">
+      <DependentUpon>FrmProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSucursal.aspx.cs">
+      <DependentUpon>FrmSucursal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmSucursal.aspx.designer.cs">
+      <DependentUpon>FrmSucursal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario.aspx.cs">
+      <DependentUpon>FrmUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.aspx.designer.cs">
+      <DependentUpon>FrmUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerProductos.aspx.cs">
+      <DependentUpon>FrmVerProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmVerProductos.aspx.designer.cs">
+      <DependentUpon>FrmVerProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPAdministracion.Master.cs">
+      <DependentUpon>MPAdministracion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPAdministracion.Master.designer.cs">
+      <DependentUpon>MPAdministracion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPGeneral.Master.cs">
+      <DependentUpon>MPGeneral.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPGeneral.Master.designer.cs">
+      <DependentUpon>MPGeneral.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MPGeneral.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="MPAdministracion.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51517</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51517/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

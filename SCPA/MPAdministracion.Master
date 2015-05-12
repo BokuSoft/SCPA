@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MPGeneral.Master" AutoEventWireup="true" CodeBehind="MPAdministracion.master.cs" Inherits="SCPA.MPAdministracion" %>
+
+<asp:Content ContentPlaceHolderID="cphNav" runat="server">
+
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cphLateral" runat="server">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Menu
+        </div>
+        <div class="panel-body">
+            <asp:ContentPlaceHolder ID="cphLateral" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cphPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="cphPrincipal" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
