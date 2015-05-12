@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
         <div class="col-sm-3"><label>Nombre</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></div>
     </div>
     <asp:Button ID="Button2" runat="server" Text="Guardar" CssClass="btn btn-success" />
 </asp:Content>
