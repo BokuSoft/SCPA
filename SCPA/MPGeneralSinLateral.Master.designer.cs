@@ -10,7 +10,7 @@
 namespace SCPA {
     
     
-    public partial class MPGeneral {
+    public partial class MPGeneralSinLateral {
         
         /// <summary>
         /// head control.
@@ -31,13 +31,13 @@ namespace SCPA {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphNav;
         
         /// <summary>
-        /// cphLateral control.
+        /// formulario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphLateral;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formulario;
         
         /// <summary>
         /// cphPrincipal control.
