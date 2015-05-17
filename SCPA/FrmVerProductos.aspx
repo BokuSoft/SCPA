@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-4">
         </div>
-        <asp:ListView ID="ListView1" runat="server">
+        <asp:ListView ID="lsvProductos" runat="server">
 
         </asp:ListView>
     </div>
