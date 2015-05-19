@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ConnectionString1" value="Server=localhost;Port=3306;Database=shonen;Uid=root;" />
+  </variables>
+  <propertySets>
+    <propertySet name="ventas" template="TemplateShonen.cst">
+      <property name="IncludeDropStatements">True</property>
+      <property name="ProcedurePrefix">usp_</property>
+      <property name="TablePrefix">tbl_</property>
+      <property name="AutoExecuteScript">False</property>
+      <property name="IncludeInsert">True</property>
+      <property name="IncludeUpdate">True</property>
+      <property name="IncludeInsertUpdate">True</property>
+      <property name="IncludeDelete">True</property>
+      <property name="IncludeSelect">True</property>
+      <property name="IncludeSelectAll">True</property>
+      <property name="IncludeSelectByForeignKey">True</property>
+      <property name="IncludeDeleteByForeignKey">True</property>
+      <property name="OutputFile">c://</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>
