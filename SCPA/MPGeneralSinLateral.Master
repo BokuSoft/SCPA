@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPGeneralSinLateral.master.cs" Inherits="SCPA.MPGeneralSinLateral" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/SCPA.css" />
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <img src="img/baner2.png" class="scpa_banner" />
+    </header>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Menu</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="FrmPrincipal.aspx">Inicio</a></li>
+                    <li><a href="FrmVerProductos.aspx">Productos</a></li>
+                    <li><a href="FrmContacto.aspx">Contacto</a></li>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <asp:ContentPlaceHolder ID="cphNav" runat="server"></asp:ContentPlaceHolder>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catalogos<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="FrmCatalogoProductos.aspx">Productos</a></li>
+                            <li><a href="FrmCatalogoUsuarios.aspx">Usuarios</a></li>
+                            <li><a href="FrmCatalogoClientes.aspx">Clientes</a></li>
+                            <li><a href="FrmCatalogoSucursales.aspx">Sucursales</a></li>
+                            <li><a href="FrmCatalogoProveedores.aspx">Proveedores</a></li>
+                            <li><a href="FrmCatalogoVentas.aspx">Ventas</a></li>
+                            <li><a href="FrmCatalogoCompras.aspx">Compras</a></li>
+                            <li><a href="FrmCatalogoCategorias.aspx">Categorias</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="FrmLogin.aspx">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <form id="formulario" runat="server">
+        <div class="container">
+            <asp:ContentPlaceHolder ID="cphPrincipal" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer>
+        <br />
+        <div id="pie">
+            diseñado por &copy;Mahousoft para Sh**nen<br />
+            2015 Todos los derechos reservados<br />
+
+            Este sitio web utiliza cookies. Al seguir utilizando el sitio, acepta que este sitio almacene cookies en su equipo
+        </div>
+    </footer>
+</body>
+</html>

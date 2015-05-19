@@ -79,7 +79,16 @@
     <Content Include="FrmSucursal.aspx" />
     <Content Include="FrmUsuario.aspx" />
     <Content Include="FrmVerProductos.aspx" />
+    <Content Include="img\18.03.2015.jpg" />
+    <Content Include="img\21.03.2015.jpg" />
+    <Content Include="img\23.03.2015.jpg" />
+    <Content Include="img\baner2.png" />
     <Content Include="img\banner.png" />
+    <Content Include="img\c_1.png" />
+    <Content Include="img\c_2.png" />
+    <Content Include="img\c_3.png" />
+    <Content Include="img\swirl_pattern.png" />
+    <Content Include="img\_____.png" />
     <Content Include="img\Emily-4.jpg" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
@@ -222,6 +231,13 @@
     <Compile Include="MPGeneral.Master.designer.cs">
       <DependentUpon>MPGeneral.Master</DependentUpon>
     </Compile>
+    <Compile Include="MPGeneralSinLateral.Master.cs">
+      <DependentUpon>MPGeneralSinLateral.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPGeneralSinLateral.Master.designer.cs">
+      <DependentUpon>MPGeneralSinLateral.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +245,11 @@
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="MPAdministracion.Master" />
+    <Content Include="MPGeneralSinLateral.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

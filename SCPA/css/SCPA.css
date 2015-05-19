@@ -4,7 +4,13 @@
     text-align:center;
 }
 
+.scpa_banner {
+    width:100%;
+}
+
 body {
+    background-image:url('../img/swirl_pattern.png');
+    background-color:#4cff00;
     /*background-color:#000000;*/
     /*background-image:url(../img/Emily-4.jpg);*/
 }
