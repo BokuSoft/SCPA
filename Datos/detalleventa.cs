@@ -89,11 +89,8 @@ namespace Datos
 			SqlService sql = new SqlService();
 			StringBuilder queryParameters = new StringBuilder();
 
-			sql.AddParameter("@idDetalleVenta", MySqlDbType.Int32, Id);
-			queryParameters.Append("@idDetalleVenta");
-
 			sql.AddParameter("@idVenta", MySqlDbType.Int32, idVenta);
-			queryParameters.Append(", @idVenta");
+			queryParameters.Append("@idVenta");
 			sql.AddParameter("@idProducto", MySqlDbType.Int32, idProducto);
 			queryParameters.Append(", @idProducto");
 			sql.AddParameter("@cantidad", MySqlDbType.Int32, cantidad);
@@ -160,8 +157,8 @@ namespace Datos
                 obj = new detalleventa();
                 obj.LoadFromReader(reader);
                 lista.Add(obj);
-                reader.Close();
             }
+            reader.Close();
             return lista;
         }
 		
@@ -170,7 +167,7 @@ namespace Datos
 			SqlService sql = new SqlService();
 			sql.AddParameter("@idDetalleVenta", MySqlDbType.Int32, id);
 	
-			MySqlDataReader reader = sql.ExecuteSqlReader("Delete detalleventa Where idDetalleVenta = @idDetalleVenta");
+			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From detalleventa Where idDetalleVenta = @idDetalleVenta");
 		}
 	}
 	#endregion

@@ -97,11 +97,8 @@ namespace Datos
 			SqlService sql = new SqlService();
 			StringBuilder queryParameters = new StringBuilder();
 
-			sql.AddParameter("@idCliente", MySqlDbType.Int32, Id);
-			queryParameters.Append("@idCliente");
-
 			sql.AddParameter("@nombre", MySqlDbType.VarChar, nombre);
-			queryParameters.Append(", @nombre");
+			queryParameters.Append("@nombre");
 			sql.AddParameter("@apellidos", MySqlDbType.VarChar, apellidos);
 			queryParameters.Append(", @apellidos");
 			sql.AddParameter("@direccion", MySqlDbType.VarChar, direccion);
@@ -184,8 +181,8 @@ namespace Datos
                 obj = new cliente();
                 obj.LoadFromReader(reader);
                 lista.Add(obj);
-                reader.Close();
             }
+            reader.Close();
             return lista;
         }
 
@@ -194,7 +191,7 @@ namespace Datos
 			SqlService sql = new SqlService();
 			sql.AddParameter("@idCliente", MySqlDbType.Int32, id);
 	
-			MySqlDataReader reader = sql.ExecuteSqlReader("Delete cliente Where idCliente = @idCliente");
+			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From cliente Where idCliente = @idCliente");
 		}
 	}
 	#endregion
