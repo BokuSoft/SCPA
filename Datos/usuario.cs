@@ -19,7 +19,7 @@ namespace Datos
 		private string _ciudad = String.Empty;
 		private DateTime _fechaNacimiento;
 		private string _telefono = String.Empty;
-		private enum EnumTipoUsuario: int {
+		public enum EnumTipoUsuario: int {
             ADMINISTRATOR,
             EMPLOYEE,
             CUSTOMER,
