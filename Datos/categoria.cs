@@ -77,11 +77,8 @@ namespace Datos
 			SqlService sql = new SqlService();
 			StringBuilder queryParameters = new StringBuilder();
 
-			sql.AddParameter("@idCategoria", MySqlDbType.Int32, Id);
-			queryParameters.Append("@idCategoria");
-
 			sql.AddParameter("@nombre", MySqlDbType.VarChar, nombre);
-			queryParameters.Append(", @nombre");
+			queryParameters.Append("@nombre");
 
 			string query = String.Format("Insert Into categoria ({0}) Values ({1})", queryParameters.ToString().Replace("@", ""), queryParameters.ToString());
 			MySqlDataReader reader = sql.ExecuteSqlReader(query);
@@ -124,8 +121,8 @@ namespace Datos
                 obj = new categoria();
                 obj.LoadFromReader(reader);
                 lista.Add(obj);
-                reader.Close();
             }
+            reader.Close();
             return lista;
         }
 
@@ -134,7 +131,7 @@ namespace Datos
 			SqlService sql = new SqlService();
 			sql.AddParameter("@idCategoria", MySqlDbType.Int32, id);
 	
-			MySqlDataReader reader = sql.ExecuteSqlReader("Delete categoria Where idCategoria = @idCategoria");
+			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From categoria Where idCategoria = @idCategoria");
 		}
 	}
 	#endregion

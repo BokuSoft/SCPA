@@ -93,11 +93,8 @@ namespace Datos
 			SqlService sql = new SqlService();
 			StringBuilder queryParameters = new StringBuilder();
 
-			sql.AddParameter("@idSucursal", MySqlDbType.Int32, Id);
-			queryParameters.Append("@idSucursal");
-
 			sql.AddParameter("@nombre", MySqlDbType.VarChar, nombre);
-			queryParameters.Append(", @nombre");
+			queryParameters.Append("@nombre");
 			sql.AddParameter("@nombreJefe", MySqlDbType.VarChar, nombreJefe);
 			queryParameters.Append(", @nombreJefe");
 			sql.AddParameter("@direccion", MySqlDbType.VarChar, direccion);
@@ -172,8 +169,8 @@ namespace Datos
                 obj = new sucursal();
                 obj.LoadFromReader(reader);
                 lista.Add(obj);
-                reader.Close();
             }
+            reader.Close();
             return lista;
         }
 
@@ -182,7 +179,7 @@ namespace Datos
 			SqlService sql = new SqlService();
 			sql.AddParameter("@idSucursal", MySqlDbType.Int32, id);
 	
-			MySqlDataReader reader = sql.ExecuteSqlReader("Delete sucursal Where idSucursal = @idSucursal");
+			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From sucursal Where idSucursal = @idSucursal");
 		}
 	}
 	#endregion

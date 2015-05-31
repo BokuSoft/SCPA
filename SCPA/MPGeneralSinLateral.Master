@@ -4,10 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/SCPA.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
@@ -59,8 +62,8 @@
         <!--/.container-fluid -->
     </nav>
 
-    <form id="formulario" runat="server">
-        <div class="container">
+    <form id="formulario" runat="server"> 
+        <div class="container" >
             <asp:ContentPlaceHolder ID="cphPrincipal" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>

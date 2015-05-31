@@ -25,7 +25,7 @@ namespace Datos
             CUSTOMER,
             GUEST
         }
-        private EnumTipoUsuario _tipoUsuario;
+        private EnumTipoUsuario _tipoUsuario = 0;
 
 		
 		public usuario()
@@ -108,11 +108,8 @@ namespace Datos
 			SqlService sql = new SqlService();
 			StringBuilder queryParameters = new StringBuilder();
 
-			sql.AddParameter("@idUsuario", MySqlDbType.Int32, Id);
-			queryParameters.Append("@idUsuario");
-
 			sql.AddParameter("@nombre", MySqlDbType.VarChar, nombre);
-			queryParameters.Append(", @nombre");
+			queryParameters.Append("@nombre");
 			sql.AddParameter("@apellidos", MySqlDbType.VarChar, apellidos);
 			queryParameters.Append(", @apellidos");
 			sql.AddParameter("@direccion", MySqlDbType.VarChar, direccion);
@@ -203,8 +200,9 @@ namespace Datos
                 obj = new usuario();
                 obj.LoadFromReader(reader);
                 lista.Add(obj);
-                reader.Close();
             }
+
+            reader.Close();
             return lista;
         }
 		
@@ -213,7 +211,7 @@ namespace Datos
 			SqlService sql = new SqlService();
 			sql.AddParameter("@idUsuario", MySqlDbType.Int32, id);
 	
-			MySqlDataReader reader = sql.ExecuteSqlReader("Delete usuario Where idUsuario = @idUsuario");
+			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From usuario Where idUsuario = @idUsuario");
 		}
 	}
 	#endregion

@@ -50,7 +50,7 @@ namespace Datos
         #region Contructors
         public SqlService()
         {
-            _connectionString = ConfigurationSettings.AppSettings["ConnectionString"];
+            _connectionString = Conectar("localhost", "shonen", "root", "");
         }
 
         public SqlService(string connectionString)
@@ -58,9 +58,9 @@ namespace Datos
             _connectionString = connectionString;
         }
 
-        public SqlService(string server, string database, string user, string password)
+        public string Conectar(string server, string database, string user, string password)
         {
-            this.ConnectionString = "Server=" + server + ";Database=" + database + ";User ID=" + user + ";Password=" + password + ";";
+            return "Server=" + server + ";Database=" + database + ";User ID=" + user + ";Password=" + password + ";";
         }
 
         public SqlService(string server, string database)
