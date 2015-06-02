@@ -1,32 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPAdministracion.Master" AutoEventWireup="true" CodeBehind="FrmSucursal.aspx.cs" Inherits="SCPA.FrmSucursal" %>
+﻿<%@ Page Title="Shonen: Sucursales" Language="C#" MasterPageFile="~/MPAdministracion.Master" AutoEventWireup="true" CodeBehind="FrmSucursal.aspx.cs" Inherits="SCPA.FrmSucursal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphLateral" runat="server">
-    <asp:Button ID="Button1" runat="server" Text="Regresar" CssClass="btn btn-default" />
+    <asp:Button ID="btnRegresar" runat="server" Text="Regresar" CssClass="btn btn-default" OnClick="btnRegresar_Click" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphPrincipal" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Registrar una nueva sucursal"></asp:Label>
-    <div class="form-group">
-        <div class="col-sm-3"><label>ID</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="txtID" runat="server"></asp:TextBox></div>
-    </div>
+    <h2>
+        <asp:Label ID="lblTitulo" runat="server" Text="Registrar una nueva sucursal"></asp:Label>
+    </h2>
     <div class="form-group">
         <div class="col-sm-3"><label>Nombre</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></div>
     </div>
     <div class="form-group">
         <div class="col-sm-3"><label>Jefe</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtJefe" runat="server"></asp:TextBox></div>
     </div>
     <div class="form-group">
         <div class="col-sm-3"><label>Dirección</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox></div>
     </div>
     <div class="form-group">
         <div class="col-sm-3"><label>Ciudad</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtCiudad" runat="server"></asp:TextBox></div>
     </div>
     <div class="form-group">
         <div class="col-sm-3"><label>Teléfono</label></div>
-        <div class="col-sm-9"><asp:TextBox ID="TextBox6" runat="server"></asp:TextBox></div>
+        <div class="col-sm-9"><asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox></div>
     </div>
-    <asp:Button ID="Button2" runat="server" Text="Guardar" CssClass="btn btn-success" />
+    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
 </asp:Content>
