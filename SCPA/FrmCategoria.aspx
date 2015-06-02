@@ -25,7 +25,7 @@
                     <asp:TextBox CssClass="form-control" ID="txtNombre" runat="server"></asp:TextBox>
                 </div>
             </div>
-            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" />
+            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
         </div>
     </div>
 </asp:Content>
