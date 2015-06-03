@@ -12,23 +12,23 @@ namespace SCPA {
             if (IsPostBack) return;
 
 
-            usuario user = (usuario)Session["usuario"];
-            if (user == null && (user.tipoUsuario.Equals(usuario.EnumTipoUsuario.GUEST) || 
-                user.tipoUsuario.Equals(usuario.EnumTipoUsuario.CUSTOMER))) {
-                Session["usuario"] = "No encontrado";
-                Response.Redirect("FrmLogin.aspx");
-            } else {
+            //usuario user = (usuario)Session["usuario"];
+            //if (user == null || (user.tipoUsuario.Equals(usuario.EnumTipoUsuario.GUEST) || 
+            //    user.tipoUsuario.Equals(usuario.EnumTipoUsuario.CUSTOMER))) {
+            //    Session["usuario"] = "No se tienen permisos para acceder.";
+            //    Response.Redirect("FrmLogin.aspx");
+            //} else {
 
-                if (Request.QueryString["op"] != null) {
-                    if (Request.QueryString["op"].Equals("1")) {
-                        Response.Write("<script>alert('Proveedor Insertado')</script>");
-                    } else {
-                        Response.Write("<script>alert('Proveedor Actualizado')</script>");
-                    }
+            if (Request.QueryString["op"] != null) {
+                if (Request.QueryString["op"].Equals("1")) {
+                    Response.Write("<script>alert('Proveedor Insertado')</script>");
+                } else {
+                    Response.Write("<script>alert('Proveedor Actualizado')</script>");
                 }
+            }
 
                 cargarDatos();
-            }            
+            //}            
         }
         
         public void cargarDatos() {

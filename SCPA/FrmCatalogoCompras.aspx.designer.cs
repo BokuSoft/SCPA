@@ -10,7 +10,7 @@
 namespace SCPA {
     
     
-    public partial class FrmCatalogoSucursales {
+    public partial class FrmCatalogoCompras {
         
         /// <summary>
         /// btnBuscar control.
@@ -49,12 +49,12 @@ namespace SCPA {
         protected global::System.Web.UI.WebControls.Button btnAgregar;
         
         /// <summary>
-        /// grdListaSucursales control.
+        /// grdListaCompras control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdListaSucursales;
+        protected global::System.Web.UI.WebControls.GridView grdListaCompras;
     }
 }

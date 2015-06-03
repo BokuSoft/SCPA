@@ -73,6 +73,7 @@
     <Content Include="FrmCarrito.aspx" />
     <Content Include="FrmCatalogoCategorias.aspx" />
     <Content Include="FrmCatalogoClientes.aspx" />
+    <Content Include="FrmCatalogoCompras.aspx" />
     <Content Include="FrmCatalogoProductos.aspx" />
     <Content Include="FrmCatalogoProveedores.aspx" />
     <Content Include="FrmCatalogoSucursales.aspx" />
@@ -80,6 +81,7 @@
     <Content Include="FrmCatalogoVentas.aspx" />
     <Content Include="FrmCategoria.aspx" />
     <Content Include="FrmCliente.aspx" />
+    <Content Include="FrmCompra.aspx" />
     <Content Include="FrmContacto.aspx" />
     <Content Include="FrmLogin.aspx" />
     <Content Include="FrmPrincipal.aspx" />
@@ -110,6 +112,7 @@
     <Content Include="img\c_1.png" />
     <Content Include="img\c_2.png" />
     <Content Include="img\c_3.png" />
+    <Content Include="img\MahouSoft.png" />
     <Content Include="img\swirl_pattern.png" />
     <Content Include="img\_____.png" />
     <Content Include="img\Emily-4.jpg" />
@@ -143,6 +146,13 @@
     </Compile>
     <Compile Include="FrmCatalogoClientes.aspx.designer.cs">
       <DependentUpon>FrmCatalogoClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoCompras.aspx.cs">
+      <DependentUpon>FrmCatalogoCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoCompras.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoCompras.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmCatalogoProductos.aspx.cs">
       <DependentUpon>FrmCatalogoProductos.aspx</DependentUpon>
@@ -192,6 +202,13 @@
     </Compile>
     <Compile Include="FrmCliente.aspx.designer.cs">
       <DependentUpon>FrmCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompra.aspx.cs">
+      <DependentUpon>FrmCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCompra.aspx.designer.cs">
+      <DependentUpon>FrmCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmContacto.aspx.cs">
       <DependentUpon>FrmContacto.aspx</DependentUpon>

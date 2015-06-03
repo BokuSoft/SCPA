@@ -1,13 +1,13 @@
-﻿<%@ Page Title="Shonen: Sucursales" Language="C#" MasterPageFile="~/MPAdministracion.Master" AutoEventWireup="true" CodeBehind="FrmCatalogoSucursales.aspx.cs" Inherits="SCPA.FrmCatalogoSucursales" %>
+﻿<%@ Page Title="Shonen: Compras" Language="C#" MasterPageFile="~/MPAdministracion.Master" AutoEventWireup="true" CodeBehind="FrmCatalogoCompras.aspx.cs" Inherits="SCPA.FrmCatalogoCompras" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphLateral" runat="server">
-    <div class="row" >
+     <div class="row" >
         <div class="col-lg-12">
             <div class="input-group">
                 <span class="input-group-btn">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-default" OnClick="btnBuscar_Click"/>
                 </span>
 
-                <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" placeholder="Nombre Sucursal" Width="100%"/>
+                <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" placeholder="Número de Folio" Width="100%"/>
                 
             </div>
         </div>
@@ -28,18 +28,23 @@
         });
     </script>
 
-    <h2>Catalogo de Sucursales</h2>
+    <h2>Catalogo de Compras</h2>
 
     <div id="grid">
-        <asp:GridView ID="grdListaSucursales" runat="server" CssClass="table" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnRowDeleting="grdCatalogo_RowDeleting" OnRowUpdating="grdCatalogo_RowUpdating">
+        <asp:GridView ID="grdListaCompras" runat="server" CssClass="table" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnRowDeleting="grdCatalogo_RowDeleting" OnRowUpdating="grdCatalogo_RowUpdating" OnRowCommand="grdCatalogo_RowCommand">
             <Columns>
-                <asp:BoundField DataField="nombre" HeaderText="nombre" />
-                <asp:BoundField DataField="nombreJefe" HeaderText="nombreJefe" />
-                <asp:BoundField DataField="direccion" HeaderText="direccion" />
-                <asp:BoundField DataField="ciudad" HeaderText="ciudad" />
-                <asp:BoundField DataField="telefono" HeaderText="telefono" />
-                <asp:ButtonField CommandName="update" Text="Actualizar" ControlStyle-CssClass="btn btn-warning" />
-                <asp:ButtonField CommandName="delete" Text="Eliminar" ControlStyle-CssClass="btn btn-danger" />
+                <asp:BoundField DataField="id" HeaderText="Folio" />
+                <asp:BoundField DataField="fecha" HeaderText="Fecha" />
+                <asp:BoundField DataField="total" HeaderText="Total" />
+                <asp:ButtonField CommandName="update" Text="Actualizar" ControlStyle-CssClass="btn btn-warning" >
+<ControlStyle CssClass="btn btn-warning"></ControlStyle>
+                </asp:ButtonField>
+                <asp:ButtonField CommandName="delete" Text="Eliminar" ControlStyle-CssClass="btn btn-danger" >
+<ControlStyle CssClass="btn btn-danger"></ControlStyle>
+                </asp:ButtonField>
+                <asp:ButtonField CommandName="ver" Text="Ver" ControlStyle-CssClass="btn btn-primary" >
+<ControlStyle CssClass="btn btn-primary"></ControlStyle>
+                </asp:ButtonField>
                 <asp:TemplateField></asp:TemplateField>
             </Columns>
             <EmptyDataTemplate>
