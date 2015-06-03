@@ -77,6 +77,7 @@
     <Content Include="FrmCatalogoProveedores.aspx" />
     <Content Include="FrmCatalogoSucursales.aspx" />
     <Content Include="FrmCatalogoUsuarios.aspx" />
+    <Content Include="FrmCatalogoVentas.aspx" />
     <Content Include="FrmCategoria.aspx" />
     <Content Include="FrmCliente.aspx" />
     <Content Include="FrmContacto.aspx" />
@@ -170,6 +171,13 @@
     </Compile>
     <Compile Include="FrmCatalogoUsuarios.aspx.designer.cs">
       <DependentUpon>FrmCatalogoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoVentas.aspx.cs">
+      <DependentUpon>FrmCatalogoVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoVentas.aspx.designer.cs">
+      <DependentUpon>FrmCatalogoVentas.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmCategoria.aspx.cs">
       <DependentUpon>FrmCategoria.aspx</DependentUpon>
