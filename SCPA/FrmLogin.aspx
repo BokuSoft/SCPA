@@ -15,7 +15,7 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-3">
-                        <label>Clave</label>
+                        <label>Nombre</label>
                     </div>
                     <div class="col-sm-9">
                         <asp:TextBox ID="txtID" runat="server"></asp:TextBox>
@@ -23,13 +23,13 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-3">
-                        <label>Nombre</label>
+                        <label>Password</label>
                     </div>
                     <div class="col-sm-9">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:Button ID="Button2" runat="server" Text="Iniciar Sesión" CssClass="btn btn-success" />
+                <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" CssClass="btn btn-success" OnClick="btnLogin_Click" />
             </div>
         </div>
     </div>

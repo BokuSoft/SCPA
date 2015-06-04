@@ -10,7 +10,7 @@
 namespace SCPA {
     
     
-    public partial class FrmLogin {
+    public partial class FrmDoVenta {
         
         /// <summary>
         /// Label1 control.
@@ -22,30 +22,21 @@ namespace SCPA {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtID control.
+        /// txtTarjeta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtID;
+        protected global::System.Web.UI.WebControls.TextBox txtTarjeta;
         
         /// <summary>
-        /// txtPass control.
+        /// btnCompletar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
-        
-        /// <summary>
-        /// btnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Button btnCompletar;
     }
 }

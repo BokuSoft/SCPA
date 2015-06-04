@@ -21,6 +21,10 @@ namespace SCPA {
 
             }
 
+            if (Session["usuario"] != null) {
+                btnComprar.Text = "Comprar";
+            }
+
             grdCarrito.DataSource = listaProductosCarrito;
             grdCarrito.DataBind();
 
@@ -29,7 +33,7 @@ namespace SCPA {
         }
 
         protected void btnComprar_Click(object sender, EventArgs e) {
-            if (Session["user"] != null) {
+            if (Session["usuario"] != null) {
                 Response.Redirect("FrmComprar.aspx");
             } else {
                 Response.Redirect("FrmLogin.aspx");

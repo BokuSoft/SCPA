@@ -40,6 +40,8 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -83,10 +85,12 @@
     <Content Include="FrmCliente.aspx" />
     <Content Include="FrmCompra.aspx" />
     <Content Include="FrmContacto.aspx" />
+    <Content Include="FrmDoVenta.aspx" />
     <Content Include="FrmLogin.aspx" />
     <Content Include="FrmPrincipal.aspx" />
     <Content Include="FrmProducto.aspx" />
     <Content Include="FrmProveedor.aspx" />
+    <Content Include="FrmRegistroUsuario.aspx" />
     <Content Include="FrmSucursal.aspx" />
     <Content Include="FrmUsuario.aspx" />
     <Content Include="FrmVerProductos.aspx" />
@@ -124,6 +128,12 @@
     <Content Include="js\jquery-2.1.1.js" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery-ui.min.js" />
+    <None Include="Service References\WST\configuration91.svcinfo" />
+    <None Include="Service References\WST\configuration.svcinfo" />
+    <None Include="Service References\WST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +228,13 @@
     <Compile Include="FrmContacto.aspx.designer.cs">
       <DependentUpon>FrmContacto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FrmDoVenta.aspx.cs">
+      <DependentUpon>FrmDoVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmDoVenta.aspx.designer.cs">
+      <DependentUpon>FrmDoVenta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.aspx.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +262,13 @@
     </Compile>
     <Compile Include="FrmProveedor.aspx.designer.cs">
       <DependentUpon>FrmProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroUsuario.aspx.cs">
+      <DependentUpon>FrmRegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroUsuario.aspx.designer.cs">
+      <DependentUpon>FrmRegistroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmSucursal.aspx.cs">
       <DependentUpon>FrmSucursal.aspx</DependentUpon>
@@ -289,6 +313,11 @@
       <DependentUpon>MPGeneralSinLateral.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MPGeneral.Master" />
@@ -300,6 +329,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Service References\WST\SCPA.WST.realizarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WST\WSTransacciones.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -315,6 +348,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WST\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
