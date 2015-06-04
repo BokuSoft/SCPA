@@ -22,6 +22,15 @@ namespace SCPA {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// formulario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formulario;
+        
+        /// <summary>
         /// cphNav control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace SCPA {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphNav;
         
         /// <summary>
-        /// formulario control.
+        /// lblCarritoCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formulario;
+        public global::System.Web.UI.WebControls.Label lblCarritoCount;
         
         /// <summary>
         /// cphPrincipal control.

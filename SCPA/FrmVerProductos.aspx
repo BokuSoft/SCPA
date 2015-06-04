@@ -15,11 +15,10 @@
                 </a>
             </ItemTemplate>
         </asp:ListView>
-
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphPrincipal" runat="server">
-    <asp:ListView ID="lsvProductos" runat="server">
+    <asp:ListView ID="lsvProductos" runat="server" OnItemCommand="lsvProductos_ItemCommand">
         <ItemTemplate>
             <div class="col-md-4">
                 <div class="thumbnail">
@@ -27,6 +26,9 @@
                     <div class="caption">
                         <h3><%# Eval("nombre") %></h3>
                         <p>$<%# Eval("precio") %></p>
+                        <asp:LinkButton CommandName="Add" CommandArgument='<%# Eval("Id") %>' runat="server" CssClass="btn btn-danger">
+                            Agregar al carrito
+                        </asp:LinkButton>
                     </div>
                 </div>
             </div>

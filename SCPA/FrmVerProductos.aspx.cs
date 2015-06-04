@@ -27,5 +27,24 @@ namespace SCPA {
             lsvProductos.DataSource = listaProductos;
             lsvProductos.DataBind();
         }
+
+        
+
+        protected void lsvProductos_ItemCommand(object sender, ListViewCommandEventArgs e) {
+            switch (e.CommandName) {
+                case "Add":
+                    if (Session["carrito"] == null) {
+                        Session["carrito"] = new List<int>();
+                    }
+                    List<int> carrito = (List<int>)Session["carrito"];
+                    int pid = int.Parse(e.CommandArgument.ToString());
+                    carrito.Add(pid);
+
+                    MPGeneralSinLateral mpgsl = (MPGeneralSinLateral)Master.Master;
+                    mpgsl.lblCarritoCount.Text = carrito.Count.ToString();
+
+                    break;
+            }
+        }
     }
 }
