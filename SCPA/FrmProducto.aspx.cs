@@ -12,9 +12,16 @@ namespace SCPA {
             if(IsPostBack) return;
             validar_load();
 
+            List<proveedor> listaProveedores = new proveedor().GetAllproveedor();
+            List<categoria> listaCategorias = new categoria().GetAllcategoria();
+            ddlCategoria.DataSource = listaCategorias;
+            ddlProveedor.DataSource = listaProveedores;
+            ddlCategoria.DataBind();
+            ddlProveedor.DataBind();
+
             string operacion = Request.QueryString["q"];
 
-            if (operacion.Equals("update") || operacion.Equals("ver")) {
+            if (operacion != null && (operacion.Equals("update") || operacion.Equals("ver"))) {
                 int id = int.Parse(Request.QueryString["id"]);
                 producto c = new producto(id);
                 mostrar(c);
@@ -34,7 +41,9 @@ namespace SCPA {
             txtNombre.Text = p.nombre;
             txtCantidad.Text = p.cantidad.ToString();
             txtPrecio.Text = p.precio.ToString();
-            chkDescontinuado.Checked = p.descontinuado != 0; 
+            chkDescontinuado.Checked = p.descontinuado != 0;
+            ddlCategoria.SelectedValue = p.idCategoria.ToString();
+            ddlProveedor.SelectedValue = p.idProveedor.ToString();
         }
 
         private void validar_load() {
@@ -42,11 +51,14 @@ namespace SCPA {
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e) {
-            int id = int.Parse(txtID.Text);
+            int id = 0;
+            int.TryParse(txtID.Text, out id);
             string nombre = txtNombre.Text;
             double precio = double.Parse(txtPrecio.Text);
             int cantidad = int.Parse(txtCantidad.Text);
             short descontinuado = chkDescontinuado.Checked ? (short)1 : (short)0;
+            int idCategoria = int.Parse(ddlCategoria.SelectedValue);
+            int idProveedor = int.Parse(ddlProveedor.SelectedValue);
 
             try {
                 producto p = new producto(id);
@@ -54,14 +66,17 @@ namespace SCPA {
                 p.cantidad = cantidad;
                 p.precio = precio;
                 p.descontinuado = descontinuado;
+                p.idCategoria = idCategoria;
+                p.idProveedor = idProveedor;
                 p.Update();
             } catch (ApplicationException ex) {
                 producto p = new producto();
-                p.Id = 0;
                 p.nombre = nombre;
                 p.cantidad = cantidad;
                 p.precio = precio;
                 p.descontinuado = descontinuado;
+                p.idCategoria = idCategoria;
+                p.idProveedor = idProveedor;
                 p.Create();
             }
 

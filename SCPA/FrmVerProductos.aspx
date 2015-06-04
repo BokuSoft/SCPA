@@ -8,14 +8,11 @@
         <div class="list-group-item active">
             <h4 class="list-group-item-heading">Menu Lateral</h4>
         </div>
-
-        <div class="list-group-item">Categoria B</div>
-        <div class="list-group-item">Categoria C</div>
-        <div class="list-group-item">Categoria D</div>
-
         <asp:ListView ID="lsvCategorias" runat="server">
             <ItemTemplate>
-                <div class="list-group-item"><%# Eval("nombre") %></div>
+                <a href="FrmVerProductos.aspx?cid=<%# Eval("Id") %>">
+                    <div class="list-group-item"><%# Eval("nombre") %></div>
+                </a>
             </ItemTemplate>
         </asp:ListView>
 

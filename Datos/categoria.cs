@@ -133,6 +133,20 @@ namespace Datos
 	
 			MySqlDataReader reader = sql.ExecuteSqlReader("Delete From categoria Where idCategoria = @idCategoria");
 		}
+
+        public override string ToString() {
+            if (nombre != null) return nombre;
+            return "null";
+        }
+
+        public override bool Equals(object obj) {
+            try {
+                categoria c = (categoria)obj;
+                return Id == c.Id;
+            } catch (Exception ex) {
+                return base.Equals(obj);
+            }
+        }
 	}
 	#endregion
 }

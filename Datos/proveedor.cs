@@ -181,6 +181,11 @@ namespace Datos
 
             MySqlDataReader reader = sql.ExecuteSqlReader("Delete From proveedor Where idProveedor = @idProveedor");
 		}
+
+        public override string ToString() {
+            if (nombre != null) return nombre;
+            return "null";
+        }
 	}
 	#endregion
 }

@@ -16,7 +16,7 @@ namespace SCPA {
             if (IsPostBack) return;
             string operacion = Request.QueryString["q"];
 
-            if (operacion.Equals("update") || operacion.Equals("ver")) {
+            if (operacion != null && (operacion.Equals("update") || operacion.Equals("ver"))) {
                 int id = int.Parse(Request.QueryString["id"]);
                 categoria c = new categoria(id);
                 mostrar(c);
@@ -45,7 +45,8 @@ namespace SCPA {
 
         protected void btnGuardar_Click(object sender, EventArgs e) {
 
-            int id = int.Parse(txtID.Text);
+            int id;
+            int.TryParse(txtID.Text, out id);
             string nombre = txtNombre.Text;
 
             try {
