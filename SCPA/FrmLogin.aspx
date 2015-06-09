@@ -26,11 +26,14 @@
                         <label>Password</label>
                     </div>
                     <div class="col-sm-9">
-                        <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                 </div>
                 <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" CssClass="btn btn-success" OnClick="btnLogin_Click" />
             </div>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary" href="FrmRegistroUsuario.aspx">¿No tienes cuenta? ¡Registrate!</a>
         </div>
     </div>
     <div class="col-md-4">

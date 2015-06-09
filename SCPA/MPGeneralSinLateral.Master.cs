@@ -15,6 +15,7 @@ namespace SCPA {
 
             lblCarritoCount.Text = carrito.Count.ToString();
 
+
         }
     }
 }

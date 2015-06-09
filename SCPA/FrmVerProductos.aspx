@@ -22,10 +22,10 @@
         <ItemTemplate>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img src="img/Emily-4.jpg" />
+                    <img src="img/imgUnavailable.png" />
                     <div class="caption">
                         <h3><%# Eval("nombre") %></h3>
-                        <p>$<%# Eval("precio") %></p>
+                        <p><%#  double.Parse(Eval("precio").ToString()).ToString("C2") %></p>
                         <asp:LinkButton CommandName="Add" CommandArgument='<%# Eval("Id") %>' runat="server" CssClass="btn btn-danger">
                             Agregar al carrito
                         </asp:LinkButton>

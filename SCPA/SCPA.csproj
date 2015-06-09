@@ -93,6 +93,8 @@
     <Content Include="FrmRegistroUsuario.aspx" />
     <Content Include="FrmSucursal.aspx" />
     <Content Include="FrmUsuario.aspx" />
+    <Content Include="FrmVenta.aspx" />
+    <Content Include="FrmVentaDone.aspx" />
     <Content Include="FrmVerProductos.aspx" />
     <Content Include="images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="images\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -117,6 +119,8 @@
     <Content Include="img\c_1.png" />
     <Content Include="img\c_2.png" />
     <Content Include="img\c_3.png" />
+    <Content Include="img\imgOK.png" />
+    <Content Include="img\imgUnavailable.png" />
     <Content Include="img\MahouSoft.png" />
     <Content Include="img\swirl_pattern.png" />
     <Content Include="img\_____.png" />
@@ -283,6 +287,20 @@
     </Compile>
     <Compile Include="FrmUsuario.aspx.designer.cs">
       <DependentUpon>FrmUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVenta.aspx.cs">
+      <DependentUpon>FrmVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmVenta.aspx.designer.cs">
+      <DependentUpon>FrmVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentaDone.aspx.cs">
+      <DependentUpon>FrmVentaDone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmVentaDone.aspx.designer.cs">
+      <DependentUpon>FrmVentaDone.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmVerProductos.aspx.cs">
       <DependentUpon>FrmVerProductos.aspx</DependentUpon>

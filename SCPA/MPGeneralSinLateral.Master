@@ -54,12 +54,21 @@
                             </ul>
                         </li>
                     </ul>
+
+                    
+
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="FrmCarrito.aspx">
                                 <img src="img/cart.png" /><asp:Label ID="lblCarritoCount" runat="server" Text="#"></asp:Label>
                             </a>
                         </li>
-                        <li><a href="FrmLogin.aspx">Iniciar Sesión</a></li>
+
+
+
+                        <asp:Literal ID="lOff" runat="server">
+                            <li><a href="FrmLogin.aspx">Iniciar Sesión</a></li>
+                        </asp:Literal>
+                        
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

@@ -11,6 +11,8 @@ namespace SCPA {
         protected void Page_Load(object sender, EventArgs e) {
             if (IsPostBack) return;
 
+
+
             if (Session["usuario"] != null && Session["usuario"].ToString().Equals("No encontrado")) 
                 Response.Write("<script type='text/javascript'>alert('No has iniciado Sesión')</script");
         }
@@ -20,7 +22,8 @@ namespace SCPA {
             foreach (usuario u in listaUsuarios) {
                 if (u.nombre.Equals(txtID.Text)) {
                     Session["usuario"] = u.Id;
-                    Response.Redirect("FrmPrincipal");
+                    Session["tipo"] = u.tipoUsuario;
+                    Response.Redirect("FrmVerProductos.aspx");
                 }
             }
         }

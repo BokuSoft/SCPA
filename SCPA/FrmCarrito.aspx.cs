@@ -28,13 +28,13 @@ namespace SCPA {
             grdCarrito.DataSource = listaProductosCarrito;
             grdCarrito.DataBind();
 
-            lblTotal.Text = total.ToString();
+            lblTotal.Text = total.ToString("C2");
 
         }
 
         protected void btnComprar_Click(object sender, EventArgs e) {
             if (Session["usuario"] != null) {
-                Response.Redirect("FrmComprar.aspx");
+                Response.Redirect("FrmDoVenta.aspx");
             } else {
                 Response.Redirect("FrmLogin.aspx");
             }

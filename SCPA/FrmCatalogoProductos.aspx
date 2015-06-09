@@ -15,7 +15,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphPrincipal" runat="server">
 
     <h2>Catalogo de Productos</h2>
-    <asp:GridView ID="grdProductos" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" OnRowCommand="grdProductos_RowCommand" OnRowDeleting="grdProductos_RowDeleting" OnRowUpdating="grdProductos_RowUpdating">
+    <asp:GridView ID="grdProductos" runat="server" CssClass="table table-hover" AutoGenerateColumns="False" OnRowCommand="grdProductos_RowCommand" OnRowDeleting="grdProductos_RowDeleting" OnRowUpdating="grdProductos_RowUpdating" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="ID" />
             <asp:BoundField DataField="idCategoria" HeaderText="Categoria" />
@@ -35,6 +35,16 @@
                 <ControlStyle CssClass="btn btn-default"></ControlStyle>
             </asp:ButtonField>
         </Columns>
+
+        <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+        <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+        <RowStyle BackColor="White" ForeColor="#330099" />
+        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+        <SortedAscendingCellStyle BackColor="#FEFCEB" />
+        <SortedAscendingHeaderStyle BackColor="#AF0101" />
+        <SortedDescendingCellStyle BackColor="#F6F0C0" />
+        <SortedDescendingHeaderStyle BackColor="#7E0000" />
 
     </asp:GridView>
 
